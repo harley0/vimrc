@@ -22,11 +22,19 @@ map <S-h> :tabp<CR>
 map <S-l> :tabn<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Text, tab and indent related
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vimrcs/basic.vim has linebreak on 500 characters, which is annoying when doing text, but good I suppose for coding???? Isn't that what word wrap is for?
+set nolbr
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => GUI related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 if has("gui_running")
-    set lines=40 columns=120
+    " for this to work on MacVim we must comment out line 33 in vimrcs/extended.vim We don't want:
+    "au GUIEnter * set fullscreen
+    set lines=40 columns=160
     " Maximize gvim window.
     " set lines=999 columns=999
     
